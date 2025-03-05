@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card for My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f1c6ff, #e3e0ff);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d13b80;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 40px;
+        }
+
+        .jar {
+            background: #fff;
+            border: 2px solid #d13b80;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .jar img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .note {
+            font-size: 1.2rem;
+            color: #444;
+            background: #f1c6ff;
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #d13b80;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 30px;
+        }
+
+        .button:hover {
+            background-color: #b23265;
+        }
+
+        .music {
+            margin-top: 20px;
+        }
+
+        .music audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, My Love! ❤️</h1>
+        <h2>A special surprise just for you 🎉</h2>
+        
+        <div class="jar">
+            <img src="https://via.placeholder.com/300x300?text=Spider-Man+Theme" alt="Spider-Man Theme">
+            <div class="note" id="note1">You bring so much joy and light into my life. ❤️</div>
+            <div class="note" id="note2">Your kindness and patience always amaze me. 😘</div>
+            <div class="note" id="note3">You make me feel cherished and loved every day. 🥰</div>
+            <div class="note" id="note4">The way you care for me melts my heart. 💖</div>
+            <div class="note" id="note5">I love our late-night chats and laughter. 🌙</div>
+            <div class="note" id="note6">You are my everything, now and forever. 💕</div>
+            <div class="note" id="note7">Every moment with you feels magical. ✨</div>
+            <div class="note" id="note8">Your love gives me strength and comfort. 🌷</div>
+            <div class="note" id="note9">I am so grateful to have you by my side. 🌹</div>
+            <div class="note" id="note10">You always know how to make me smile. 😊</div>
+            <div class="note" id="note11">You inspire me to be a better person every day. 💪</div>
+            <div class="note" id="note12">You make my world a better place just by being in it. 🌍</div>
+            <div class="note" id="note13">I can't wait to make more memories with you. 💭</div>
+            <div class="note" id="note14">Your love fills me with peace and happiness. 🕊️</div>
+            <div class="note" id="note15">The way you care for the little things shows your true heart. 💝</div>
+            <div class="note" id="note16">You are my perfect match in every way. 🔥</div>
+            <div class="note" id="note17">Every day with you is an adventure I cherish. 🌄</div>
+            <div class="note" id="note18">I love your warmth and your gentle soul. 🧡</div>
+            <div class="note" id="note19">Your laugh is my favorite sound in the world. 🎶</div>
+            <div class="note" id="note20">I adore everything about you. ❤️</div>
+            <div class="note" id="note21">You make me feel like the luckiest person alive. 🍀</div>
+            <div class="note" id="note22">Our bond grows stronger with every passing day. 💫</div>
+            <div class="note" id="note23">Your love is my greatest treasure. 💎</div>
+            <div class="note" id="note24">I will always cherish you, forever and always. 🌸</div>
+        </div>
+
+        <button class="button" onclick="revealNote()">Click for a Note</button>
+        
+        <div class="music">
+            <audio controls>
+                <source src="your-srk-romantic-song.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        let currentNote = 0;
+        const notes = document.querySelectorAll('.note');
+        
+        function revealNote() {
+            if (currentNote < notes.length) {
+                notes[currentNote].style.display = 'block';
+                currentNote++;
+            } else {
+                alert("You've revealed all the notes. Happy Birthday again, my love! 💖");
+            }
+        }
+    </script>
+</body>
+</html>
